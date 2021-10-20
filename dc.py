@@ -6,7 +6,8 @@ pin = 20
 GPIO.setup(pin, GPIO.OUT)
 
 pwm = GPIO.PWM(pin, 100)
-pwm.start(0)
+pwm.start(100)
+delay(0.5)
 
 for x in range(100,-1,-1):
   pwm.ChangeDutyCycle(1)
