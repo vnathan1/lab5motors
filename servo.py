@@ -15,9 +15,8 @@ GPIO.setup(pwmPin, GPIO.OUT)
 dcMin = 2
 dcMax = 12
 
-pwm = GPIO.PWM(pwmPin, 40) # PWM object at 50 Hz (20 ms period)
+pwm = GPIO.PWM(pwmPin, 50) # PWM object at 50 Hz (20 ms period)
 pwm.start(0)
-while True:
   pwm.ChangeDutyCycle(dcMax)
   time.sleep(0.5)
   pwm.ChangeDutyCycle(dcMin)
