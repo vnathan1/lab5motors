@@ -9,7 +9,8 @@ pwm = GPIO.PWM(pin, 100)
 pwm.start(100)
 time.sleep(0.5)
 
-for x in range(100,-1,-1):
+
+for x in range(100,0,-1):
   pwm.ChangeDutyCycle(1)
   time.sleep(0.02)
 
